@@ -12,11 +12,15 @@ python3 -m http.server 8000
 
 ## 一键部署
 
-### 1) GitHub Pages
+### 1) GitHub Pages（已修复 main/master 分支兼容）
 仓库已包含工作流：`.github/workflows/deploy-pages.yml`。
 
-- 推送到 `main` 分支后会自动部署。
-- 站点文件位于仓库根目录（`index.html`、`styles.css`）。
+- 推送到 `main` **或** `master` 都会自动部署。
+- GitHub 仓库请在 **Settings → Pages** 中确认 **Source = GitHub Actions**。
+- 默认访问链接：`https://<你的用户名>.github.io/<仓库名>/`
+
+若仓库是 `yuangiving/codex`，访问链接即：
+`https://yuangiving.github.io/codex/`
 
 ### 2) Vercel
 仓库已包含 `vercel.json`，可直接导入仓库部署。
